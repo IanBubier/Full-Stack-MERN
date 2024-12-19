@@ -1,0 +1,342 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;600;900&family=Jost:wght@300;600;900&display=swap');
+
+
+/*   ----- Variables  -----  */
+:root {
+    --bright-leaf-opaque: #818F3Ecc;
+    --bright-leaf: #818F3E;
+    --leaf-flesh-opaque:#60742Ccc;
+    --leaf-flesh: #60742C;
+    --shadowed-leaf: #434D19;
+    --leaf-vein-opaque: #D7C08Acc;
+    --leaf-vein: #D7C08A; 
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-color: var(--bright-leaf);
+    background-image: url(images/green-leaf-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color:var(--shadowed-leaf);
+    font-family: 'Jost', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    font-size: 110%;
+    margin: 0 5% 0 5%;
+    padding: 0;
+    max-width: 75%;
+    line-height: 1.5;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--bright-leaf);
+    color:var(--shadowed-leaf);
+    margin:2%;
+    padding:2%;
+    text-align: center;
+    border: 15px solid var(--leaf-vein);
+    }
+  main {
+    background-color:var(--leaf-vein-opaque);
+    color:var(--shadowed-leaf);
+    margin:2%;
+    padding:2%;
+    }
+  section {}
+  .gallery { 
+    display: flex;
+    flex-flow: row wrap;
+    margin:1%; 
+    padding:1%;
+    }
+  .gallery figure {
+    width:600px;
+    margin:1%;
+    padding:1%;
+    border:15px solid var(--leaf-flesh);
+    }
+  .gallery figcaption {
+    display:block; 
+    padding:1%;
+    color:var(--shadowed-leaf);
+    }
+  .gallery img  {
+      width:100%;
+      margin:0;
+      padding:0;
+    }
+  article {}
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {}
+  footer {
+    background-color:var(--bright-leaf);
+    color:var(--shadowed-leaf);
+    margin:2%;
+    padding:2%;
+    }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    margin:2%;
+    padding:2%;
+    }
+  nav a {
+    background-color:var(--bright-leaf);
+    color:var(--shadowed-leaf);
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:2%;
+    padding:2%;
+    margin:2%;
+    min-width:15%;
+    border:5px solid var(--leaf-vein)
+    }
+  nav a:hover {
+    background-color:var(--leaf-flesh);
+    color:var(--shadowed-leaf);
+    }
+  .local {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    margin:1%;
+    padding:1%;
+    }
+  .local a {
+    background-color:var(--bright-leaf);
+    color:var(--shadowed-leaf);
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:0;
+    padding:1%;
+    margin:1%;
+    min-width:10%;
+    border: none;
+    }
+  .local a:hover {
+    background-color:var(--leaf-flesh);
+    color:var(--shadowed-leaf);
+    }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family:'Archivo', sans-serif;} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {} 
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    margin:5%;
+    padding:5%;
+    width:90%;
+    color:var(--shadowed-leaf);
+    background-color: var(--leaf-vein-opaque);
+    color:var(--shadowed-leaf);
+    font-size: 120%;
+  }
+  caption {
+    margin:5%;
+    padding:1%;
+    font-size: 120%;
+    color:var(--shadowed-leaf);
+    background-color: var(--leaf-vein);
+    border: 5px solid var(--leaf-flesh);
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {
+    margin:2%;
+    padding:2%;
+    color:var(--shadowed-leaf);
+  }
+    tr:nth-child(even) {}
+  th {
+    margin:2%;
+    padding:2%; 
+    color:var(--shadowed-leaf);
+  }
+  td {
+    margin:2%;
+    padding:2%;
+    color:var(--shadowed-leaf);
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  fieldset {
+    background-color:var(--bright-leaf-opaque);
+    color:var(--shadowed-leaf);
+    margin:2%;
+    font-size:120%; 
+    padding:2%;
+    font-family:inherit;
+    border: 5px solid var(--leaf-flesh);
+  }
+    legend {
+      background-color:var(--leaf-vein);
+      color:var(--shadowed-leaf);
+      border: 5px solid var(--leaf-flesh);
+      margin:2%;
+      padding:2%;
+      font-size:120%;
+      font-family:inherit;
+    }
+  label {
+    display: block;
+    margin:2%;
+    padding:2%;
+    color:var(--shadowed-leaf);
+    font-size: 110%;
+    font-family:inherit;
+  }
+  button {
+    background-color:var(--leaf-flesh);
+    color:var(--leaf-vein);
+    font-size:120%; 
+    margin:5%;
+    padding:2%;
+    font-family:inherit;
+    border: 5px solid var(--leaf-vein);
+  }
+  input {
+    background-color:var(--leaf-vein);
+    color:var(--shadowed-leaf);
+    font-size:110%;
+    font-family:inherit;
+    width: 95%;
+  }
+  select {
+    background-color:var(--leaf-vein);
+    color:var(--shadowed-leaf);
+    font-size:110%; 
+    font-family:inherit;
+  }
+    optgroup {}
+    option {}
+  textarea {
+    background-color:var(--leaf-vein);
+    color:var(--shadowed-leaf);
+    font-size:90%; 
+    font-family:inherit;
+    height: 40%;
+    width: 95%;
+  }
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}

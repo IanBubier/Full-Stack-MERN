@@ -1,0 +1,99 @@
+### CREATE five documents.
+POST http://localhost:3000/ships HTTP/1.1
+content-type: application/json
+
+{
+    "shipName": "USS Lexington",
+    "shipNation": "USA", 
+    "shipType": "CV", 
+    "shipClass": "Lexington", 
+    "shipTonnage": 36000,
+    "complement": 2791, 
+    "commissioned": "12-14-1927"
+}
+
+### CREATE 2
+POST http://localhost:3000/ships HTTP/1.1
+content-type: application/json
+
+{
+    "shipName": "HMS Janus",
+    "shipNation": "UK", 
+    "shipType": "DD", 
+    "shipClass": "J", 
+    "shipTonnage": 1690,
+    "complement": 183, 
+    "commissioned": "08-05-1938"
+}
+
+### CREATE 3
+POST http://localhost:3000/ships HTTP/1.1
+content-type: application/json
+
+{
+    "shipName": "U-331",
+    "shipNation": "Germany", 
+    "shipType": "SS", 
+    "shipClass": "Type VIIC", 
+    "shipTonnage": 757,
+    "complement": 60, 
+    "commissioned": "03-31-1941"
+}
+
+### CREATE 4
+POST http://localhost:3000/ships HTTP/1.1
+content-type: application/json
+
+{
+    "shipName": "Kirishima",
+    "shipNation": "Japan", 
+    "shipType": "BB", 
+    "shipClass": "Kongo", 
+    "shipTonnage": 36600,
+    "complement": 1360, 
+    "commissioned": "04-19-1915"
+}
+
+### CREATE 5
+POST http://localhost:3000/ships HTTP/1.1
+content-type: application/json
+
+{
+    "shipName": "USS Helena",
+    "shipNation": "USA", 
+    "shipType": "CL", 
+    "shipClass": "Brooklyn", 
+    "shipTonnage": 10000,
+    "complement": 888, 
+    "commissioned": "09-18-1939"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/ships HTTP/1.1
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/ships/65e5159354ffb8ccea7f6026 HTTP/1.1
+
+### UPDATE one document's shipTonnage, by ID.
+### Replace the ID in the following request with one that exists
+### and update the shipTonnage:
+PUT http://localhost:3000/ships/65e5159254ffb8ccea7f6024 HTTP/1.1
+content-type: application/json
+
+{
+    "shipName": "U-331",
+    "shipNation": "Germany", 
+    "shipType": "SS", 
+    "shipTonnage": 857,
+    "shipClass": "Type VIIC", 
+    "complement": 60, 
+    "commissioned": "03-31-1941"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/ships/65e5159054ffb8ccea7f6022 HTTP/1.1
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/ships HTTP/1.1
